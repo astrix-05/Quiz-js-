@@ -8,6 +8,7 @@
     font-family: "Montserrat", sans-serif;
 }
 
+
 body {
     display: flex;
     padding: 15px;
@@ -27,7 +28,6 @@ body {
 
 /* Config container */
 .config-container {
-    display: block;
     width: 415px;
     padding: 8px;
     text-align: center;
@@ -99,7 +99,7 @@ body {
 
 /* Quiz container */
 .quiz-container {
-    
+    display: block;
     background: #fff;
     border-radius: 8px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.13);
@@ -188,22 +188,18 @@ body {
 .result-container .try-again-btn {
     margin-top: 30px;
     padding: 12px 20px;
-    background: #5145BA ; /* Changed color to blue */
-}
-
-.quiz-timer {
-    position: absolute;
-    top: 20px;
-    right: 20px;
+    background: #5145BA; /* Changed color to #5145BA */
+    
 }
 
 .quiz-timer .timer-value {
-    background: #32313c;
+    background: #000;
     color: #fff;
     padding: 5px 10px;
     border-radius: 5px;
     font-weight: bold;
     display: inline-block;
+    transition: 0.3s ease;
 }
 
 /* Styling for bordered elements */
