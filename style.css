@@ -14,7 +14,8 @@ body {
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background-image: url("D:/Quiz js/background.jpg.jpeg");
+   background-image: url("./background.jpg.jpeg");
+
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
