@@ -1,7 +1,6 @@
 /* Importing Google Fonts - Montserrat */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap');
 
-/* Global Reset */
 * {
     margin: 0;
     padding: 0;
@@ -9,7 +8,6 @@
     font-family: "Montserrat", sans-serif;
 }
 
-/* Body Styling */
 body {
     display: flex;
     padding: 15px;
@@ -18,7 +16,7 @@ body {
     min-height: 100vh;
     background: #5145BA;
 }
-/* Container Styling */
+
 :where(.config-container, .quiz-container, .result-container) {
     display: none;
     background: #fff;
@@ -27,8 +25,9 @@ body {
     border: 1px solid #000;
 }
 
-/* Config Container */
+/* Config container */
 .config-container {
+    display: block;
     width: 415px;
     padding: 8px;
     text-align: center;
@@ -83,7 +82,10 @@ body {
     background: #dad5fd;
 }
 
-/* Start Quiz Button */
+.config-options button {
+    flex: 1 1 10%;
+}
+
 .config-container .start-quiz-btn {
     color: #fff;
     border: none;
@@ -95,9 +97,9 @@ body {
     transition: background 0.3s ease;
 }
 
-/* Quiz Container */
+/* Quiz container */
 .quiz-container {
-    display: block;
+    
     background: #fff;
     border-radius: 8px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.13);
@@ -108,7 +110,6 @@ body {
     position: relative;
 }
 
-/* Answer Options */
 .answer-options {
     list-style: none;
     padding: 0;
@@ -128,7 +129,6 @@ body {
     margin-bottom: 10px;
 }
 
-/* Correct & Incorrect Answer Styles */
 .quiz-content .answer-option.correct {
     border-color: #28a745;
     background: #d4edda;
@@ -145,14 +145,12 @@ body {
     background: #dad5fd;
 }
 
-/* Quiz Footer */
 .quiz-footer {
     margin-top: 20px;
     text-align: center;
     position: relative;
 }
 
-/* Next Question Button */
 .next-question-btn {
     padding: 10px 20px;
     font-size: 1rem;
@@ -170,7 +168,7 @@ body {
     background: #3e36a1;
 }
 
-/* Result Container */
+/* Result container */
 .result-container {
     text-align: center;
     padding: 40px;
@@ -190,24 +188,25 @@ body {
 .result-container .try-again-btn {
     margin-top: 30px;
     padding: 12px 20px;
-    background: #5145BA;
-    color: white;
-    border: none;
-    cursor: pointer;
+    background: #5145BA ; /* Changed color to blue */
 }
 
-/* Quiz Timer */
+.quiz-timer {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
 .quiz-timer .timer-value {
-    background: #000;
+    background: #32313c;
     color: #fff;
     padding: 5px 10px;
     border-radius: 5px;
     font-weight: bold;
     display: inline-block;
-    transition: 0.3s ease;
 }
 
-/* Styling for Bordered Elements */
+/* Styling for bordered elements */
 .bordered {
     border: 1px solid #000;
     padding: 5px;
