@@ -1,0 +1,215 @@
+/* Importing Google Fonts - Montserrat */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+body {
+    display: flex;
+    padding: 15px;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-image: url("D:/Quiz js/background.jpg.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+:where(.config-container, .quiz-container, .result-container) {
+    display: none;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.13);
+    border: 1px solid #000;
+}
+
+/* Config container */
+.config-container {
+    width: 415px;
+    padding: 8px;
+    text-align: center;
+}
+
+.config-container .config-title {
+    font-size: 1.31rem;
+}
+
+.config-container .config-option {
+    margin-top: 25px;
+}
+
+.config-container .option-title {
+    font-size: 1.125rem;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.config-option .category-options {
+    display: grid;
+    gap: 15px;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.config-option .question-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 0 30px;
+    justify-content: center;
+}
+
+.config-option button {
+    padding: 12px;
+    font-size: .938rem;
+    font-weight: 500;
+    background: #fff;
+    border-radius: 6px;
+    cursor: pointer;
+    border: 1px solid #9B8FFF;
+    transition: 0.3s ease;
+}
+
+.config-option button.active {
+    background: #dfdadf;
+    color: #5145BA;
+    border-color: #5145BA;
+}
+
+.config-option button:hover {
+    background: #dad5fd;
+}
+
+.config-options button {
+    flex: 1 1 10%;
+}
+
+.config-container .start-quiz-btn {
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    margin-top: 30px;
+    font-weight: 500;
+    background: #5145BA;
+    padding: 13px 25px;
+    transition: background 0.3s ease;
+}
+
+/* Quiz container */
+.quiz-container {
+    display: block;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.13);
+    border: 1px solid #000;
+    padding: 20px;
+    width: 100%;
+    max-width: 600px;
+    position: relative;
+}
+
+.answer-options {
+    list-style: none;
+    padding: 0;
+}
+
+.answer-option {
+    display: flex;
+    align-items: center;
+    padding: 13px 16px;
+    font-size: .938rem;
+    font-weight: 500;
+    background: #fff;
+    border-radius: 6px;
+    cursor: pointer;
+    border: 1px solid #9B8FFF;
+    transition: 0.3s ease;
+    margin-bottom: 10px;
+}
+
+.quiz-content .answer-option.correct {
+    border-color: #28a745;
+    background: #d4edda;
+    color: #155724;
+}
+
+.quiz-content .answer-option.incorrect {
+    border-color: #dc3545;
+    background: #f8d7da;
+    color: #721c24;
+}
+
+.answer-option:hover {
+    background: #dad5fd;
+}
+
+.quiz-footer {
+    margin-top: 20px;
+    text-align: center;
+    position: relative;
+}
+
+.next-question-btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: 500;
+    background: #5145BA;
+    color: #fff;
+    visibility: hidden;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.next-question-btn:hover {
+    background: #3e36a1;
+}
+
+/* Result container */
+.result-container {
+    text-align: center;
+    padding: 40px;
+    width: 410px;
+}
+
+.result-container .result-img {
+    width: 110px;
+}
+
+.result-container .result-title {
+    margin-top: 30px;
+    font-size: 1.125rem;
+    font-weight: 500;
+}
+
+.result-container .try-again-btn {
+    margin-top: 30px;
+    padding: 12px 20px;
+    background: #5145BA; /* Changed color to #5145BA */
+    
+}
+
+.quiz-timer .timer-value {
+    background: #000;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    display: inline-block;
+    transition: 0.3s ease;
+}
+
+/* Styling for bordered elements */
+.bordered {
+    border: 1px solid #000;
+    padding: 5px;
+    display: inline-block;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+}
