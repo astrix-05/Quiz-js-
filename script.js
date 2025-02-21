@@ -6,6 +6,8 @@ const questionStatus = document.querySelector(".question-status");
 const timerDisplay = document.querySelector(".timer-value"); 
 const resultContainer = document.querySelector(".result-container");
 
+
+
 // Quiz state variables
 const QUIZ_TIME_LIMIT = 10;
 let currentTime = QUIZ_TIME_LIMIT;
@@ -120,8 +122,15 @@ const startQuiz = () => {
     quizContainer.style.display = "block";
 
     // Update the quiz category and number of questions 
-    quizCategory = configContainer.querySelector(".category-option.active").textContent;
-    numberofQuestions = parseInt(configContainer.querySelector(".question-option.active").textContent);
+    const selectedCategory = configContainer.querySelector(".category-option.active");
+const selectedQuestionCount = configContainer.querySelector(".question-option.active");
+
+if (!selectedCategory || !selectedQuestionCount) {
+    alert("Please select a category and number of questions!");
+    return;
+}
+  quizCategory = selectedCategory.textContent;
+numberofQuestions = parseInt(selectedQuestionCount.textContent);
 
     renderQuestion();
 }
