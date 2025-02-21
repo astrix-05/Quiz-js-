@@ -9,7 +9,7 @@ const resultContainer = document.querySelector(".result-container");
 
 
 // Quiz state variables
-const QUIZ_TIME_LIMIT = 10;
+const QUIZ_TIME_LIMIT = 20;
 let currentTime = QUIZ_TIME_LIMIT;
 let timer = null;
 let quizCategory = "programming";
